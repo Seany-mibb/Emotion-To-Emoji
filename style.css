@@ -1,0 +1,32 @@
+body
+{
+  color: white;
+  background-image: url("better.gif");
+  background-color: black;
+  font-family: 'Yanone Kaffeesatz';
+  letter-spacing: 2px;
+}
+span
+{
+  font-size: 30px;
+}
+#camera , #result
+{
+  border: 2px dashed lightpink;
+  width: 280px;
+  height: 280px; 
+}
+#result_emotion_name ,#result_emotion_name2  
+{
+  color: white;
+}
+.emotion_name
+{
+  font-size: 40px;
+  color:white;
+}
+.emoji
+{
+  font-size:48px;
+  color:white;
+}

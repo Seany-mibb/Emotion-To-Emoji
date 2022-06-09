@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class = "btn btn-info heading" style="font-size: 25px;">Emotion To Emoji App
+      <br>
+      <span>&#128512;</span>
+      <span>&#129327;</span>
+      <span>&#129321;</span>
+      <span>&#128539;</span>
+      <span>&#129396;</span>
+      </h3>
+      <br>
+      <br>
+      <p style="font-size: 18px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you feelin' Happy?</b>
+        <br>
+        <b style="color: rgb(116, 240, 139)">Are you feelin' Sad?</b>
+        <br>
+        <b style="color: red">Are you feelin' Angry?</b>
+        <br>
+        <b style="color: rgb(55, 0, 255)">Or are you feelin' Funny?</b>
+        <br>
+      </p>
+
+      <div class = "col-md-4 col-sm-12 col-xs-12">
+        <label>
+          Webcam View - 
+        </label>
+        <div id = "camera"></div>
+        <br><br>
+        <button onclick="take_snapshot();" class = "btn btn-warning">Capture Image</button>
+      </div>
+
+      <div class = 'col-md-4 col-sm-12 col-xs-12'>
+        <label>Prediction 1 - </label>
+        <p class = "emotion_name" id = "result_emotion_name"></p>
+        <p class = "emoji" id = "update_emoji"></p>
+
+        <label>Prediction 2 - </label>
+        <p class = "emotion_name" id = "result_emotion_name2"></p>
+        <p class = "emoji" id = "update_emoji2"></p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id = "result"></div>
+        <br><br>
+        <button onclick = "check();" class = "btn btn-success">Predict Emotion</button>
+      </div>
+      <br>
+      <br>
+      <div id = "mov">
+        <marquee scrollamount = 5 onmouseover="this.stop();" onmouseleave="this.start();"><h2 id = "mov_text">Huzzah!... Huzzah Come Huzzah with us Here: </h2></marquee>
+      </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
